@@ -1,3 +1,1 @@
-# cesar-verastegui-luna
-
-## Cesar D. Verastegui
+# Cesar D. Verastegui
