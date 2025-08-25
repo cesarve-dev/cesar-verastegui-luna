@@ -5,6 +5,20 @@ body {
     background-color: #EEEAE3;
 }
 
+.hero-section {
+    display: flex;
+}
+
+.hero-image-container {
+    width: 50%;
+    padding: 2% 0;
+
+}
+
+.hero-image-container img {
+    width: 100%;
+}
+
 h1, h2 {
     font-family: "Host Grotesk", sans-serif;
     font-weight: 800;
@@ -12,10 +26,6 @@ h1, h2 {
     font-size: 64px;
 }
 
-h1 {
-    text-align: center;
-
-}
 h2 {
     font-size: 48px;
     margin: 12px 0;
@@ -43,8 +53,8 @@ li {
 }
 
 .container {
-    max-width: 1280px;
-    margin: 0 auto;
+    width: 50%;
+    margin: 0 8px;
 }
 
 .ph {
@@ -53,5 +63,19 @@ li {
 
 a {
     text-decoration: none;
-    color: #0B4F6C; 
+    color: #0B4F6C;
+    border: 1px solid #0B4F6C;
+    border-radius: 15px;
+    padding: 8px 12px;
+    margin-right: 12px; 
+}
+
+a:hover {
+    color: #EEEAE3;
+    background-color: #0B4F6C;
+}
+
+#contact ul {
+    display: flex;
+
 }
