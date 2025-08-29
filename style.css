@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=SUSE:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+
+body {
+    background-color: #EEEAE3;
+}
+
+.hero-section {
+    display: flex;
+}
+
+.hero-image-container {
+    width: 50%;
+    padding: 2% 0;
+
+}
+
+.hero-image-container img {
+    width: 100%;
+}
+
+h1, h2 {
+    font-family: "Host Grotesk", sans-serif;
+    font-weight: 800;
+    font-style: auto;
+    font-size: 64px;
+}
+
+h2 {
+    font-size: 48px;
+    margin: 12px 0;
+}
+
+p, ul {
+    font-family: "Merriweather", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 18px;
+    color: hsl(0, 10%, 20%);
+}
+
+p {
+    margin: 8px 1.5%;
+}
+
+ul {
+    padding: 0 8px;
+}
+
+li {
+    list-style: none;
+    padding: 4px 0;
+}
+
+.container {
+    width: 50%;
+    margin: 0 8px;
+}
+
+.ph {
+    margin: 4px;
+}
+
+a {
+    text-decoration: none;
+    color: #0B4F6C;
+    border: 1px solid #0B4F6C;
+    border-radius: 15px;
+    padding: 8px 12px;
+    margin-right: 12px; 
+}
+
+a:hover {
+    color: #EEEAE3;
+    background-color: #0B4F6C;
+}
+
+#connect ul {
+    display: flex;
+
+}
