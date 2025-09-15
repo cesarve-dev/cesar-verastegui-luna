@@ -11,15 +11,10 @@ body {
     display: flex;
 }
 
-.hero-image-container, .container {
+.hero-image-container, .hero-content-container {
     width: 50%;
-    padding: 2% 0;
+    padding: 1% 1%;
 
-}
-
-.container {
-    /* width: 50%; */
-    margin: 0 1%;
 }
 
 .hero-image-container img {
@@ -30,7 +25,7 @@ body {
     margin: 0;
 }
 
-h1, h2 {
+h1, h2, h3 {
     font-family: "Host Grotesk", sans-serif;
     font-weight: 800;
     font-style: auto;
@@ -42,12 +37,16 @@ h2 {
     margin: 12px 0;
 }
 
+h3 {
+    font-size: 28px;
+    margin: 4px 0;
+}
+
 p, ul {
     font-family: "Merriweather", serif;
     font-weight: 300;
     font-style: normal;
     font-size: 18px;
-    /* color: hsl(199, 42%, 25%); */
     color: hsl(190, 33%, 15%);
 }
 
@@ -66,7 +65,7 @@ li {
 }
 
 .ph {
-    margin: 4px;
+    margin-right: 4px;
 }
 
 a {
@@ -88,10 +87,30 @@ a:hover {
 
 }
 
-#title-heading, #about, #experience, #connect {
+#title-heading, #about, #experience, #connect, #skills, #projects {
     background-color: hsl(38, 24%, 87%);
     border: 1px solid #0C1618;
     padding: 4% 2%;
     border-radius: 10px;
     margin: 1% 0;
+}
+
+/* nav section */
+
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    border: 1px solid #0C1618;
+    border-radius: 15px;
+    background-color: hsl(38, 24%, 87%);
+    position: sticky;
+    top: 0%;
+}
+
+/* experince section layout */
+
+.experience-item-container {
+    display: flex;
+    justify-content: space-between;
 }
