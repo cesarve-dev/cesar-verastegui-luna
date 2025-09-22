@@ -157,6 +157,10 @@ section {
     row-gap: 1rem;
 }
 
+/* =========
+Tablet
+========== */
+
 @media (min-width: 700px) {
 
     nav {
@@ -194,6 +198,10 @@ section {
         width: 49%;
     }
 }
+
+/* =========
+Desktop
+========== */
 
 @media (min-width: 1280px) {
 
