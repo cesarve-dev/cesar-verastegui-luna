@@ -47,6 +47,7 @@ p, ul {
 
 p {
     margin: 8px 1.5%;
+    line-height: 1.5em;
 }
 
 ul {
@@ -70,7 +71,7 @@ a {
     border-radius: 15px;
     padding: 12px 12px;
     text-align: center;
-    margin: .5rem
+    font-size: 1.5rem;
 }
 
 a:first-child {
@@ -146,13 +147,37 @@ section {
     margin-bottom: 2rem;
 }
 
-/* experince section layout */
+/* experince section */
 
 .grid-container {
     display: grid;
     grid-template-columns: 1fr .4fr;
     column-gap: 2rem;
     row-gap: 1rem;
+}
+
+/* skills section */
+
+#skills ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#skills ul li {
+    padding: 5px 12px;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 3rem 1rem;
+    background-color: #0C1618;
+}
+
+footer p {
+    color:hsl(38, 6%, 50%);
 }
 
 /* =========
@@ -195,6 +220,10 @@ Tablet
     .hero-content-container {
         width: 49%;
     }
+
+    #skills ul {
+        justify-content: flex-start;
+    }
 }
 
 /* =========
@@ -212,14 +241,10 @@ Desktop
         line-height: 1.5rem;
     }
 
-    nav a {
-        font-size: 1.2rem;
+    nav a, .social-link a {
+        font-size: 1rem;
     }
 
-    .experience-date {
-        text-align: right;
-        font-size: 0.9rem;
-    }
 
     /* ==========
     layout
