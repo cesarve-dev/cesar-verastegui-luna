@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=SUSE:wght@100..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
 
+/* Mobile-first */
+
 body {
     background-color: #EEEAE3;
     color: #0C1618;
@@ -68,6 +70,7 @@ a {
     border-radius: 15px;
     padding: 12px 12px;
     text-align: center;
+    margin: .5rem
 }
 
 a:first-child {
@@ -83,8 +86,8 @@ a:hover {
     background-color: hsl(190, 33%, 15%);
 }
 
-a {
-    margin: .5rem;
+.experience-date {
+    font-weight: bold;
 }
 
 /* ==============
@@ -205,11 +208,17 @@ Desktop
     ========== */
 
     p {
-        font-size: 1rem;
+        font-size: 1.1rem;
+        line-height: 1.5rem;
     }
 
     nav a {
-        font-size: 1rem;
+        font-size: 1.2rem;
+    }
+
+    .experience-date {
+        text-align: right;
+        font-size: 0.9rem;
     }
 
     /* ==========
@@ -224,5 +233,22 @@ Desktop
     main {
         max-width: 1280px;
         margin: auto auto;
+    }
+
+    .hero-image-container, .hero-content-container {
+        width: 49.5%;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    #connect ul {
+        justify-content: space-around;
+        font-size: 1rem;
+    }
+
+    #title-heading {
+        text-align: left;
     }
 }
