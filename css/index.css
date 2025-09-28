@@ -251,6 +251,12 @@ Desktop
         font-size: 1rem;
     }
 
+    .experience-date {
+        font-size: .9rem;
+        font-weight: 700;
+        text-align: right;
+    }
+
 
     /* ==========
     layout
