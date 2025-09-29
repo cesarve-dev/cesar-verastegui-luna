@@ -88,14 +88,6 @@ a:hover {
     background-color: hsl(190, 33%, 15%);
 }
 
-/* nav section */
-
-nav {
-    border: 1px solid #0C1618;
-    border-radius: 15px;
-    background-color: hsl(38, 24%, 87%);
-}
-
 /* ==============
 Layout 
 ===============*/
@@ -103,7 +95,7 @@ Layout
 header {
     margin: 0.5rem;
     position: sticky;
-    top: 0%;
+    top: 0;
 }
 
 /* nav section */
