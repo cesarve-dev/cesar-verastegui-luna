@@ -205,6 +205,7 @@ Tablet
     main {
         flex-direction: row;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
     
     .hero-image-container {
