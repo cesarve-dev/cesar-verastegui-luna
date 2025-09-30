@@ -166,6 +166,12 @@ section {
     padding: 5px 12px;
 }
 
+/* Contact section */
+
+#contact, #messages {
+    width: 100%
+}
+
 /* Footer */
 
 footer {
