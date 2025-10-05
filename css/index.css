@@ -197,12 +197,16 @@ button[type="submit"], button[type="button"] {
 
 /* Messages */
 
+#messages {
+    display: none;
+}
+
 #messages ul li {
     display: flex;
     flex-direction: column;
 }
 
-#message-link {
+.message-link {
     border: none;
     border-radius: 0;
     text-decoration: underline;
@@ -337,9 +341,6 @@ Desktop
 
     #title-heading {
         text-align: left;
-    }
-
-    #messages ul li {
     }
 
     button[type="submit"], button[type="button"] {
