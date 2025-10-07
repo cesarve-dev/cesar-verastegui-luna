@@ -37,10 +37,9 @@ h3 {
     margin: 4px 0;
 }
 
-p, ul {
+p, ul, form label, button[type="submit"], button[type="button"] {
     font-family: "Merriweather", serif;
     font-weight: 300;
-    font-style: normal;
     font-size: 1.5rem;
     color: hsl(190, 33%, 15%);
 }
@@ -122,7 +121,7 @@ main {
     border-radius: 15px;
 }
 
-#title-heading, #about, #experience, #connect, #skills, #projects {
+#title-heading, #about, #experience, #connect, #skills, #projects, #contact, #messages {
     background-color: hsl(38, 24%, 87%);
     border: 1px solid #0C1618;
     border-radius: 10px;
@@ -166,6 +165,63 @@ section {
     padding: 5px 12px;
 }
 
+/* Contact section */
+
+input, textarea {
+    width: 100%;
+    border: 1px solid hsl(190, 33%, 15%);
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    margin-top: .5rem;
+}
+
+input {
+    height: 2rem;
+}
+
+textarea {
+    height: 5rem;
+}
+
+button[type="submit"], button[type="button"] {
+    width: 100%;
+    padding: 1.3rem 0;
+    text-transform: uppercase;
+    border: 1px solid hsl(190, 33%, 15%);
+    border-radius: 15px;
+    background-color: hsl(190, 33%, 15%);
+    color:#EEEAE3;
+    margin-top: .5rem;
+}
+
+/* Messages */
+
+#messages {
+    display: none;
+}
+
+#messages ul li {
+    display: block;
+    flex-direction: column;
+}
+
+span {
+    display: block;
+}
+
+.message-link {
+    border: none;
+    border-radius: 0;
+    text-decoration: underline;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+#messages ul li span {
+    padding: 1rem 0;
+}
+
 /* Footer */
 
 footer {
@@ -205,6 +261,7 @@ Tablet
     main {
         flex-direction: row;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
     
     .hero-image-container {
@@ -222,6 +279,10 @@ Tablet
     #skills ul {
         justify-content: flex-start;
     }
+
+    #contact, #messages {
+        width: 100%;
+    }
 }
 
 /* =========
@@ -234,8 +295,11 @@ Desktop
     Typography
     ========== */
 
+    p, ul, form label, button[type="submit"], button[type="button"] {
+        font-size: 1rem;
+    }
+
     p {
-        font-size: 1.1rem;
         line-height: 1.5rem;
     }
 
@@ -279,5 +343,16 @@ Desktop
 
     #title-heading {
         text-align: left;
+    }
+
+    button[type="submit"], button[type="button"] {
+        width: auto;
+        padding: 1rem 3rem;
+        margin-left: 0;
+        cursor: pointer;
+    }
+
+    button[type="button"] {
+        margin-right: .5rem;
     }
 }
