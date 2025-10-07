@@ -185,7 +185,6 @@ textarea {
 
 button[type="submit"], button[type="button"] {
     width: 100%;
-    margin: auto auto;
     padding: 1.3rem 0;
     text-transform: uppercase;
     border: 1px solid hsl(190, 33%, 15%);
@@ -202,8 +201,12 @@ button[type="submit"], button[type="button"] {
 }
 
 #messages ul li {
-    display: flex;
+    display: block;
     flex-direction: column;
+}
+
+span {
+    display: block;
 }
 
 .message-link {
@@ -293,11 +296,10 @@ Desktop
     ========== */
 
     p, ul, form label, button[type="submit"], button[type="button"] {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     p {
-        
         line-height: 1.5rem;
     }
 
@@ -345,7 +347,12 @@ Desktop
 
     button[type="submit"], button[type="button"] {
         width: auto;
-        padding: 1rem 4rem;
+        padding: 1rem 3rem;
         margin-left: 0;
+        cursor: pointer;
+    }
+
+    button[type="button"] {
+        margin-right: .5rem;
     }
 }
