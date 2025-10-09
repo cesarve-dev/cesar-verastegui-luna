@@ -96,3 +96,15 @@ messageForm.addEventListener('submit', (event) => {
         messageForm.reset();
     } 
 });
+
+// Navigation meny icon
+const menuIcon = document.querySelector(".icon");
+const navMenu = document.getElementById("nav-mobile");
+
+menuIcon.addEventListener('click', (event) => {
+    if(window.getComputedStyle(navMenu).display === 'flex') {
+        navMenu.style.display = "none";
+    } else {
+        navMenu.style.display = "flex";
+    }
+});
