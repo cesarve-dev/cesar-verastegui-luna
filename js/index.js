@@ -108,3 +108,36 @@ menuIcon.addEventListener('click', (event) => {
         navMenu.style.display = "flex";
     }
 });
+
+// Get Github User Repositories
+
+// async function getUser() {
+//     const response = await fetch("https://api.github.com/users/cesarve-dev/repos");
+//     try {
+//         if (!response.ok) {
+//             throw new Error(response.status);
+//         } 
+
+//         const data = await response.json();
+//         return data;
+//     } catch (error) {
+//         console.error('new error:', error);
+//     }    
+// }
+
+fetch("https://api.github.com/users/cesarve-dev/repos")
+    .then(response => {
+        return response.json()
+    })
+    .then(data => {
+        const repositories = data;
+        const projectSection = document.getElementById('projects');
+        const projectList = projectSection.querySelector('ul');
+
+        for (let i = 0; i < repositories.length; i++) {
+            const project = document.createElement('li');
+            project.innerHTML = repositories[i].name;
+            projectList.appendChild(project);
+        }
+    })
+    .catch (error => console.log(error)); 

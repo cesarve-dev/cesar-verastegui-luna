@@ -182,6 +182,13 @@ section {
     padding: 5px 12px;
 }
 
+/* Projects section */
+
+#projects ul {
+    display: flex;
+    flex-direction: column;
+}
+
 /* Connect section */
 
 #connect ul {
