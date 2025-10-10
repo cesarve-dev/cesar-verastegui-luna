@@ -96,3 +96,58 @@ messageForm.addEventListener('submit', (event) => {
         messageForm.reset();
     } 
 });
+
+// Navigation meny icon
+const menuIcon = document.querySelector(".icon");
+const navMenu = document.getElementById("nav-mobile");
+
+menuIcon.addEventListener('click', (event) => {
+    if(window.getComputedStyle(navMenu).display === 'flex') {
+        navMenu.style.display = "none";
+    } else {
+        navMenu.style.display = "flex";
+    }
+});
+
+// Get Github User Repositories
+
+async function getUser() {
+    const response = await fetch("https://api.github.com/users/cesarve-dev/repos");
+    try {
+        if (!response.ok) {
+            throw new Error(response.status);
+        } 
+
+        const data = await response.json();
+        const projectSection = document.getElementById('projects');
+        const projectList = projectSection.querySelector('ul');
+
+        for (let i = 0; i < data.length; i++) {
+            const project = document.createElement('li');
+            project.innerHTML = data[i].name;
+            projectList.appendChild(project);
+        }
+        
+    } catch (error) {
+        console.error('new error:', error);
+    }    
+}
+
+getUser();
+
+// fetch("https://api.github.com/users/cesarve-dev/repos")
+//     .then(response => {
+//         return response.json()
+//     })
+//     .then(data => {
+//         const repositories = data;
+//         const projectSection = document.getElementById('projects');
+//         const projectList = projectSection.querySelector('ul');
+
+//         for (let i = 0; i < repositories.length; i++) {
+//             const project = document.createElement('li');
+//             project.innerHTML = repositories[i].name;
+//             projectList.appendChild(project);
+//         }
+//     })
+//     .catch (error => console.log(error)); 
