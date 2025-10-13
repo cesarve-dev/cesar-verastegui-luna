@@ -70,6 +70,10 @@ li {
     font-weight: 300;
 }
 
+#projects a {
+    color: #0C1618;
+}
+
 /* ==============
 Layout 
 ===============*/
@@ -380,14 +384,16 @@ Desktop
         display: block;
     }
 
+    #nav-desktop a:hover {
+        background-color: #0C1618;
+        color:hsl(38, 24%, 87%);
+        border-radius: 15px;;
+    }
+
     #nav-desktop a {
         text-decoration: none;
         color: #0C1618;
         font-weight: 400;
-    }
-
-    #nav-desktop :last-child {
-        padding-right: 0;
     }
 
     main {
