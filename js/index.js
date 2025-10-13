@@ -96,3 +96,65 @@ messageForm.addEventListener('submit', (event) => {
         messageForm.reset();
     } 
 });
+
+// Navigation meny icon
+const menuIcon = document.querySelector(".icon");
+const navMenu = document.getElementById("nav-mobile");
+
+menuIcon.addEventListener('click', (event) => {
+    if(window.getComputedStyle(navMenu).display === 'flex') {
+        navMenu.style.display = "none";
+    } else {
+        navMenu.style.display = "flex";
+    }
+});
+
+// Get Github User Repositories
+
+async function getRepositories() { 
+    try {
+        const response = await fetch("https://api.github.com/users/cesarve-dev/repos");
+
+        if (!response.ok) {
+            throw new Error(response.status);
+        } 
+
+        const data = await response.json();
+        const projectSection = document.getElementById('projects');
+        const projectList = projectSection.querySelector('ul');
+
+        if(data.length === 0) {
+            projectList.innerHTML = "<li>No  repositories found</li>";
+        } else {
+            for (let i = 0; i < data.length; i++) {
+                const project = document.createElement('li');
+                project.innerHTML = `<a href="${data[i].html_url}" target="_blank">${data[i].name}</a>`;
+                projectList.appendChild(project);
+            }
+        }    
+    } catch (error) {
+        console.error('new error:', error);
+        const projectSection = document.getElementById('projects');
+        const projectList = projectSection.querySelector('ul');
+        projectList.innerHTML = `<li>An error has ocurred. new Error: ${error} </li>`;
+    }    
+}
+
+getRepositories();
+
+// fetch("https://api.github.com/users/cesarve-dev/repos")
+//     .then(response => {
+//         return response.json()
+//     })
+//     .then(data => {
+//         const repositories = data;
+//         const projectSection = document.getElementById('projects');
+//         const projectList = projectSection.querySelector('ul');
+
+//         for (let i = 0; i < repositories.length; i++) {
+//             const project = document.createElement('li');
+//             project.innerHTML = repositories[i].name;
+//             projectList.appendChild(project);
+//         }
+//     })
+//     .catch (error => console.log(error)); 

@@ -17,14 +17,14 @@ Typography
     text-align: center;
 }
 
-h1, h2, h3 {
+h1, h2, h3, #nav-mobile a, #nav-desktop a {
     font-family: "Host Grotesk", sans-serif;
     font-weight: 800;
-    font-size: 4rem;
 }
 
 h1 {
     margin: 0;
+    font-size: 4rem;
 }
 
 h2 {
@@ -40,7 +40,7 @@ h3 {
 p, ul, form label, button[type="submit"], button[type="button"] {
     font-family: "Merriweather", serif;
     font-weight: 300;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: hsl(190, 33%, 15%);
 }
 
@@ -63,52 +63,71 @@ li {
     margin-right: 4px;
 }
 
-a {
+#nav-mobile a {
+    font-size: 1.2rem;
     text-decoration: none;
-    color: hsl(190, 33%, 15%);
-    border: 1px solid hsl(190, 33%, 15%);
-    border-radius: 15px;
-    padding: 12px 12px;
-    text-align: center;
-    font-size: 1.5rem;
-    margin: .5rem;
-}
-
-a:first-child {
-    margin-top: 0;
-}
-
-a:last-child {
-    margin-bottom: 0;
-}
-
-a:hover {
     color: #EEEAE3;
-    background-color: hsl(190, 33%, 15%);
+    font-weight: 300;
+}
+
+#projects a {
+    color: #0C1618;
 }
 
 /* ==============
 Layout 
 ===============*/
 
-header {
-    margin: 0.5rem;
-    position: sticky;
-    top: 0;
-}
-
 /* nav section */
 
-nav {
-    border: 1px solid #0C1618;
-    border-radius: 15px;
-    background-color: hsl(38, 24%, 87%);
-    display: flex;
-    flex-direction: column;
-    
+header {
+    overflow: hidden;
+    position: sticky;
+    top: 0;
     padding: 1rem;
+    background-color: rgba(238, 234, 227, 0.7);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
 }
 
+#logo-container {
+    display: flex;
+    padding: .5rem 0;
+}
+
+#nav-mobile {
+    border: 1px solid #0C1618;
+    border-radius: 15px;
+    background-color: #0C1618;
+    flex-direction: column;
+    padding: 1rem;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+#nav-mobile a {
+    padding: .8rem 0;
+}
+
+#nav-desktop, #nav-mobile {
+    display: none;
+}
+
+header a.icon {
+    background: #0C1618;
+    display: block;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    border-radius: 50%;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: #EEEAE3;
+}
+
+/* main section */
 main {
     margin: 0.5rem;
     display: flex;
@@ -163,6 +182,30 @@ section {
 
 #skills ul li {
     padding: 5px 12px;
+}
+
+/* Projects section */
+
+#projects ul {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Connect section */
+
+#connect ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#connect li {
+    padding: 0 .5rem;
+}
+
+#connect li a{
+    text-decoration: none;
+    color:#0C1618;
 }
 
 /* Contact section */
@@ -320,7 +363,37 @@ Desktop
 
     header {
         max-width: 1280px;
-        margin: .5rem auto;
+        margin: auto auto;
+        padding: 1rem 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(238, 234, 227, 0.7);
+        position: sticky;
+        top: 0;
+        border-radius: 15px;
+        backdrop-filter: blur(10px);
+        /* box-shadow: 0 8px 32px 0 rgba(112, 110, 105, 0.398); */
+    }
+
+    #nav-mobile, header a.icon {
+        display: none;
+    }
+
+    #nav-desktop {
+        display: block;
+    }
+
+    #nav-desktop a:hover {
+        background-color: #0C1618;
+        color:hsl(38, 24%, 87%);
+        border-radius: 15px;;
+    }
+
+    #nav-desktop a {
+        text-decoration: none;
+        color: #0C1618;
+        font-weight: 400;
     }
 
     main {
