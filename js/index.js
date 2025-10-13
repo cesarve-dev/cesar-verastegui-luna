@@ -111,9 +111,10 @@ menuIcon.addEventListener('click', (event) => {
 
 // Get Github User Repositories
 
-async function getUser() {
-    const response = await fetch("https://api.github.com/users/cesarve-dev/repos");
+async function getRepositories() { 
     try {
+        const response = await fetch("https://api.github.com/users/cesarve-dev/repos");
+
         if (!response.ok) {
             throw new Error(response.status);
         } 
@@ -122,18 +123,24 @@ async function getUser() {
         const projectSection = document.getElementById('projects');
         const projectList = projectSection.querySelector('ul');
 
-        for (let i = 0; i < data.length; i++) {
-            const project = document.createElement('li');
-            project.innerHTML = data[i].name;
-            projectList.appendChild(project);
-        }
-        
+        if(data.length === 0) {
+            projectList.innerHTML = "<li>No  repositories found</li>";
+        } else {
+            for (let i = 0; i < data.length; i++) {
+                const project = document.createElement('li');
+                project.innerHTML = `<a href="${data[i].html_url}" target="_blank">${data[i].name}</a>`;
+                projectList.appendChild(project);
+            }
+        }    
     } catch (error) {
         console.error('new error:', error);
+        const projectSection = document.getElementById('projects');
+        const projectList = projectSection.querySelector('ul');
+        projectList.innerHTML = `<li>An error has ocurred. new Error: ${error} </li>`;
     }    
 }
 
-getUser();
+getRepositories();
 
 // fetch("https://api.github.com/users/cesarve-dev/repos")
 //     .then(response => {
