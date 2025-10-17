@@ -100,14 +100,19 @@ messageForm.addEventListener('submit', (event) => {
 // Navigation meny icon
 const menuIcon = document.querySelector(".icon");
 const navMenu = document.getElementById("nav-mobile");
+const navLinks = document.querySelectorAll('.nav-link');
 
-menuIcon.addEventListener('click', (event) => {
-    if(window.getComputedStyle(navMenu).display === 'flex') {
-        navMenu.style.display = "none";
-    } else {
-        navMenu.style.display = "flex";
-    }
-});
+function toggleMenu() {
+    navMenu.classList.toggle('hidden');
+}
+
+menuIcon.addEventListener('click', toggleMenu);
+
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.add('hidden');
+    })
+})
 
 // Get Github User Repositories
 
