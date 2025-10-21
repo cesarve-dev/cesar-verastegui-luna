@@ -146,20 +146,3 @@ async function getRepositories() {
 }
 
 getRepositories();
-
-// fetch("https://api.github.com/users/cesarve-dev/repos")
-//     .then(response => {
-//         return response.json()
-//     })
-//     .then(data => {
-//         const repositories = data;
-//         const projectSection = document.getElementById('projects');
-//         const projectList = projectSection.querySelector('ul');
-
-//         for (let i = 0; i < repositories.length; i++) {
-//             const project = document.createElement('li');
-//             project.innerHTML = repositories[i].name;
-//             projectList.appendChild(project);
-//         }
-//     })
-//     .catch (error => console.log(error)); 

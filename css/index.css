@@ -3,6 +3,11 @@
 
 /* Mobile-first */
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
 body {
     background-color: #EEEAE3;
     color: #0C1618;
@@ -362,7 +367,6 @@ Desktop
         font-weight: 700;
         text-align: right;
     }
-
 
     /* ==========
     layout
