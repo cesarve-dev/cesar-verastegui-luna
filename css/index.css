@@ -80,6 +80,10 @@ Layout
 
 /* nav section */
 
+.hidden {
+    display: none;
+}
+
 header {
     overflow: hidden;
     position: sticky;
@@ -95,7 +99,8 @@ header {
     padding: .5rem 0;
 }
 
-#nav-mobile {
+header nav {
+    display: flex;
     border: 1px solid #0C1618;
     border-radius: 15px;
     background-color: #0C1618;
@@ -106,10 +111,12 @@ header {
 }
 
 #nav-mobile a {
-    padding: .8rem 0;
+    text-align: center;
+    width: 100%;
+    padding: 1rem 0;
 }
 
-#nav-desktop, #nav-mobile {
+#nav-desktop {
     display: none;
 }
 
@@ -117,8 +124,8 @@ header a.icon {
     background: #0C1618;
     display: block;
     position: absolute;
-    right: 8px;
-    top: 8px;
+    right: 1rem;
+    top: .7rem;
     border-radius: 50%;
     padding: 12px;
     display: flex;
@@ -363,7 +370,7 @@ Desktop
 
     header {
         max-width: 1280px;
-        margin: auto auto;
+        margin: .5rem auto;
         padding: 1rem 5px;
         display: flex;
         justify-content: space-between;
@@ -373,15 +380,19 @@ Desktop
         top: 0;
         border-radius: 15px;
         backdrop-filter: blur(10px);
-        /* box-shadow: 0 8px 32px 0 rgba(112, 110, 105, 0.398); */
     }
 
     #nav-mobile, header a.icon {
         display: none;
     }
 
-    #nav-desktop {
+    header #nav-desktop {
         display: block;
+        background-color: transparent;
+        border: none;
+        border-radius: 0;
+        padding: 0;
+        margin: 0;
     }
 
     #nav-desktop a:hover {
